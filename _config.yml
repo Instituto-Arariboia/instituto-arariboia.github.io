@@ -1,0 +1,41 @@
+title: Instituto Arariboia
+description: Associação cultural dedicada às humanidades, às ciências sociais e à formação histórica brasileira.
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+url: ""
+baseurl: ""
+
+permalink: /publicacoes/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      mathjax: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - IMAGE_SOURCES.md
+  - README.md
+  - dev.md
+  - info.md
+  - infos.md
+  - program.md
+  - instituto_arariboia_work_summary.md
+  - arariboia_site_template.zip
+  - arariboia_site
+  - institutoarariboia.github.io
+  - scripts
+  - _site
+  - .jekyll-cache
+  - .bundle
+  - vendor

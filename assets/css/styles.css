@@ -1,0 +1,398 @@
+:root {
+  --gold: #d4af37;
+  --gold-dark: #9c7a22;
+  --red: #741719;
+  --red-dark: #4e0f12;
+  --black: #0b0b0b;
+  --ivory: #f4efe5;
+  --paper: #fffaf0;
+  --gray: #8f877a;
+  --line: rgba(11, 11, 11, 0.14);
+  --max: 1180px;
+  --serif-display: "Cinzel", Georgia, serif;
+  --serif-body: "Libre Baskerville", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--black);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: rgba(116, 23, 25, 0.08);
+  font-size: 0.92em;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 34px;
+  color: var(--paper);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.18));
+  backdrop-filter: blur(6px);
+}
+
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(212, 175, 55, .62);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, .18);
+}
+.brand-text { font-family: var(--serif-display); letter-spacing: .05em; text-transform: uppercase; }
+
+.main-nav { display: flex; align-items: center; gap: 26px; font-size: 14px; font-weight: 600; }
+.main-nav a { opacity: .92; }
+.main-nav a:hover { color: var(--gold); opacity: 1; }
+.nav-donate { border: 1px solid var(--gold); padding: 8px 14px; border-radius: 999px; }
+
+.hero {
+  min-height: 92vh;
+  display: grid;
+  align-items: end;
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 86px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .24)),
+    url("../images/portinari-brasil.jpeg") center/cover;
+  filter: grayscale(18%) contrast(1.08);
+  transform: scale(1.02);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 60%, rgba(116, 23, 25, .34), transparent 36%);
+}
+.hero-content { position: relative; color: var(--paper); }
+.hero h1 {
+  margin: 0;
+  font-family: var(--serif-display);
+  font-size: clamp(58px, 10vw, 132px);
+  line-height: .88;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+.hero-lead {
+  max-width: 680px;
+  margin: 28px 0 34px;
+  font-family: var(--serif-body);
+  font-size: clamp(18px, 2vw, 26px);
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.image-credit {
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.image-credit a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.hero-credit {
+  margin: 34px 0 0;
+  color: rgba(255, 250, 240, .66);
+}
+.hero-credit a:hover { color: var(--gold); }
+
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.eyebrow.red { color: var(--red); }
+.eyebrow.gold { color: var(--gold); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.btn-primary { background: var(--gold); color: var(--black); }
+.btn-primary:hover { background: #e4c45d; }
+.btn-secondary { border: 1px solid rgba(255, 255, 255, .55); color: var(--paper); }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+.about-section, .cards-section, .committee-section { padding: 105px 0; }
+.about-intro {
+  display: grid;
+  gap: 58px;
+}
+.two-column {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+h1, h2 {
+  margin: 0;
+  font-family: var(--serif-display);
+  line-height: 1.02;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
+h2 { font-size: clamp(36px, 5vw, 68px); }
+.prose p {
+  margin: 0 0 22px;
+  font-family: var(--serif-body);
+  font-size: 19px;
+}
+.about-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.about-detail {
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.about-detail h3 {
+  margin: 0 0 18px;
+  font-family: var(--serif-display);
+  font-size: 28px;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+.about-detail p:not(.eyebrow) {
+  margin: 0 0 16px;
+  font-family: var(--serif-body);
+  font-size: 17px;
+}
+.about-detail p:last-child { margin-bottom: 0; }
+
+.section-ivory { background: var(--paper); }
+.section-red { background: var(--red); color: var(--paper); }
+.section-dark { background: var(--black); color: var(--paper); }
+
+.image-text-section { padding: 96px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.feature-image { margin: 0; }
+.feature-image img {
+  width: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  filter: saturate(.82) contrast(1.04);
+}
+.feature-image figcaption {
+  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.feature-image figcaption a:hover { color: var(--red); }
+.feature-copy p:not(.eyebrow) { font-size: 18px; max-width: 620px; }
+
+.section-heading { margin-bottom: 42px; }
+.section-heading.light h2 { color: var(--paper); }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.editorial-card {
+  min-height: 330px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.editorial-card:hover { transform: translateY(-5px); box-shadow: 0 22px 40px rgba(0, 0, 0, .08); }
+.card-number { color: var(--gold-dark); font-weight: 800; }
+.editorial-card h3, .publication-card h3 {
+  font-family: var(--serif-display);
+  font-size: 28px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.editorial-card a { margin-top: auto; color: var(--red); font-weight: 800; }
+
+.publications-section { padding: 110px 0; }
+.publication-grid { display: grid; grid-template-columns: 1.3fr .8fr .8fr; gap: 22px; align-items: stretch; }
+.publication-card {
+  background: var(--paper);
+  color: var(--black);
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+.publication-card.large { min-height: 520px; }
+.publication-image {
+  position: relative;
+  min-height: 250px;
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .22)), url("../images/portinari-pau-brasil.jpeg") center/cover;
+  filter: saturate(.9) contrast(1.05);
+}
+.publication-credit {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  color: rgba(255, 250, 240, .82);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
+}
+.publication-credit a:hover { color: var(--gold); }
+.publication-body { padding: 30px; }
+.publication-body h3 a:hover { color: var(--red); }
+.meta { color: var(--red); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
+.quote-card { justify-content: center; padding: 34px; background: #fff; }
+.quote-mark { margin: 0; color: var(--red); font-size: 72px; line-height: .7; font-family: var(--serif-body); }
+blockquote { margin: 0; font-family: var(--serif-body); font-size: 20px; line-height: 1.55; }
+.quote-author { color: var(--red); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: 12px; }
+.section-action { margin-top: 28px; }
+
+.name-list { border-left: 2px solid var(--gold); padding-left: 30px; }
+.name-list p { margin: 0 0 28px; font-size: 18px; }
+
+.support-section { padding: 100px 0; }
+.support-box {
+  max-width: 860px;
+  text-align: center;
+}
+.support-box p:not(.eyebrow) { max-width: 620px; margin: 24px auto 30px; font-family: var(--serif-body); font-size: 19px; }
+
+.page-shell { padding-top: 78px; background: var(--paper); min-height: 70vh; }
+.page-hero {
+  padding: 90px 0 78px;
+  border-bottom: 6px solid var(--gold);
+}
+.page-hero h1 {
+  max-width: 980px;
+  font-size: clamp(42px, 7vw, 86px);
+}
+.page-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 24px 0 0;
+  font-family: var(--serif-body);
+  font-size: 20px;
+}
+
+.post-index { padding: 82px 0 96px; }
+.post-list {
+  display: grid;
+  gap: 24px;
+}
+.post-list-item {
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: var(--ivory);
+}
+.post-list-item h2 {
+  font-size: clamp(30px, 4vw, 48px);
+}
+.post-list-item p:not(.meta) {
+  max-width: 820px;
+  font-family: var(--serif-body);
+  font-size: 18px;
+}
+.text-link {
+  color: var(--red);
+  font-weight: 800;
+}
+.text-link:hover { color: var(--gold-dark); }
+.empty-state {
+  padding: 44px;
+  border: 1px solid var(--line);
+  background: var(--ivory);
+}
+
+.post-page { padding-bottom: 90px; }
+.post-article {
+  max-width: 860px;
+  padding-top: 76px;
+}
+.post-header {
+  margin-bottom: 46px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+.post-header h1 {
+  font-size: clamp(42px, 7vw, 76px);
+}
+.post-meta {
+  color: var(--gray);
+  font-weight: 700;
+}
+.post-summary {
+  max-width: 760px;
+  font-family: var(--serif-body);
+  font-size: 21px;
+}
+.post-content {
+  font-family: var(--serif-body);
+  font-size: 19px;
+  line-height: 1.82;
+}
+.post-content h2 {
+  margin: 46px 0 18px;
+  font-size: 34px;
+}
+.post-content a { color: var(--red); font-weight: 700; }
+.post-content blockquote {
+  margin: 34px 0;
+  padding: 24px 28px;
+  border-left: 4px solid var(--gold);
+  background: var(--ivory);
+}
+.post-content ul { padding-left: 24px; }
+.post-back {
+  display: inline-block;
+  margin-top: 48px;
+}
+
+.site-footer { background: #070707; color: var(--paper); padding: 42px 0; }
+.footer-grid { display: flex; justify-content: space-between; gap: 30px; align-items: center; }
+.footer-grid p { margin: 4px 0 0; color: rgba(255, 255, 255, .62); }
+.footer-links { display: flex; gap: 20px; color: rgba(255, 255, 255, .78); }
+.footer-links a:hover { color: var(--gold); }
+
+@media (max-width: 860px) {
+  .site-header { padding: 14px 18px; }
+  .brand-text { display: none; }
+  .main-nav { gap: 12px; font-size: 12px; }
+  .main-nav a:not(.nav-donate) { display: none; }
+  .two-column, .feature-grid, .card-grid, .publication-grid, .about-detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-section, .cards-section, .committee-section, .publications-section { padding: 72px 0; }
+  .feature-image img { min-height: 320px; }
+  .publication-card.large { min-height: auto; }
+  .page-shell { padding-top: 70px; }
+  .post-article { padding-top: 52px; }
+  .footer-grid { flex-direction: column; align-items: flex-start; }
+}

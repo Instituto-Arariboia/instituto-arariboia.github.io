@@ -1,0 +1,37 @@
+---
+layout: default
+title: Publicações
+description: Artigos, conferências e notas do Instituto Arariboia.
+permalink: /publicacoes/
+---
+<main class="page-shell">
+  <section class="page-hero section-dark">
+    <div class="container">
+      <p class="eyebrow gold">Publicações</p>
+      <h1>Artigos, conferências e notas</h1>
+      <p>Textos editoriais do Instituto Arariboia sobre história, humanidades, ciências sociais e cultura brasileira.</p>
+    </div>
+  </section>
+
+  <section class="post-index section-ivory">
+    <div class="container">
+      {% if site.posts.size > 0 %}
+      <div class="post-list">
+        {% for post in site.posts %}
+        <article class="post-list-item">
+          <p class="meta">{{ post.category | default: 'Artigo' }} · {{ post.date | date: "%d/%m/%Y" }}</p>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 190 }}</p>
+          <a class="text-link" href="{{ post.url | relative_url }}">Ler publicação</a>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <h2>Nenhuma publicação cadastrada.</h2>
+        <p>Adicione arquivos Markdown em <code>_posts</code> para publicar os primeiros textos.</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>

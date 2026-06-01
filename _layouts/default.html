@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'pt-BR' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  {% if page.mathjax or page.layout == 'post' %}
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  {% endif %}
+</head>
+<body class="{{ page.body_class | default: 'site-page' }}">
+  <header class="site-header">
+    <a class="brand" href="{{ '/#top' | relative_url }}" aria-label="Instituto Arariboia">
+      <img class="brand-mark" src="{{ '/assets/images/logo-arariboia.jpg' | relative_url }}" alt="" aria-hidden="true">
+      <span class="brand-text">Instituto Arariboia</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="{{ '/#instituto' | relative_url }}">Instituto</a>
+      <a href="{{ '/#areas' | relative_url }}">Áreas</a>
+      <a href="{{ '/publicacoes/' | relative_url }}">Publicações</a>
+      <a class="nav-donate" href="{{ '/#apoie' | relative_url }}">Apoie</a>
+    </nav>
+  </header>
+
+  {{ content }}
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Instituto Arariboia</strong>
+        <p>Niterói — Rio de Janeiro — Brasil</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/institutoarariboia/">Instagram</a>
+        <a href="https://www.youtube.com/@institutoarariboia">YouTube</a>
+        <a href="mailto:institutoarariboia@gmail.com">Contato</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
