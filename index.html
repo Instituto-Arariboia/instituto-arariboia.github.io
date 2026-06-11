@@ -2,21 +2,21 @@
 layout: default
 body_class: home
 title: Início
-description: Instituto Arariboia — humanidades, ciências sociais e formação histórica brasileira a serviço da cultura nacional.
+description: Instituto Arariboia — humanidades, filosofia e ciências sociais, a serviço do Brasil e dos brasileiros.
 ---
 <main id="top">
   <section class="hero section-dark">
-    <div class="hero-bg" role="img" aria-label="Obra Brasil, de Candido Portinari"></div>
+    <div class="hero-bg" role="img" aria-label="Obra Floresta I, de Candido Portinari"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <p class="eyebrow">Niterói · Rio de Janeiro · Brasil</p>
       <h1>Instituto<br>Arariboia</h1>
-      <p class="hero-lead">Humanidades, ciências sociais e formação histórica brasileira a serviço da cultura nacional.</p>
+      <p class="hero-lead">Humanidades, filosofia e ciências sociais, a serviço do Brasil e dos brasileiros.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#instituto">Conheça o Instituto</a>
         <a class="btn btn-secondary" href="{{ '/publicacoes/' | relative_url }}">Ver publicações</a>
       </div>
-      <p class="image-credit hero-credit">Imagem: <a href="https://www.portinari.org.br/acervo/obras/20336/brasil">Brasil, Candido Portinari</a></p>
+      <p class="image-credit hero-credit">Imagem: <a href="https://www.portinari.org.br/acervo/obras/16929/floresta-i">Floresta I, Candido Portinari</a></p>
     </div>
   </section>
 
@@ -55,8 +55,8 @@ description: Instituto Arariboia — humanidades, ciências sociais e formação
   <section class="image-text-section section-ivory">
     <div class="container feature-grid">
       <figure class="feature-image">
-        <img src="{{ '/assets/images/portinari-indio.jpeg' | relative_url }}" alt="Índio, desenho de Candido Portinari">
-        <figcaption>Imagem: <a href="https://www.portinari.org.br/pt/acervo/obras/20356/indian-man">Índio, Candido Portinari</a></figcaption>
+        <img src="{{ '/assets/images/portinari-cabeca-de-indio.jpeg' | relative_url }}" alt="Cabeça de Índio, teste de afresco de Candido Portinari">
+        <figcaption>Imagem: <a href="https://www.portinari.org.br/acervo/obras/18552/cabeca-de-indio">Cabeça de Índio, Candido Portinari</a></figcaption>
       </figure>
       <div class="feature-copy">
         <p class="eyebrow red">Nosso patrono</p>
@@ -97,6 +97,38 @@ description: Instituto Arariboia — humanidades, ciências sociais e formação
     </div>
   </section>
 
+  <section class="artwork-section section-ivory" aria-labelledby="portinari-heading">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow red">Acervo visual</p>
+        <h2 id="portinari-heading">Portinari como referência brasileira</h2>
+      </div>
+      <div class="artwork-grid">
+        <figure class="artwork-card">
+          <img src="{{ '/assets/images/portinari-floresta-i.jpeg' | relative_url }}" alt="Floresta I, obra de Candido Portinari">
+          <figcaption><a href="https://www.portinari.org.br/acervo/obras/16929/floresta-i">Floresta I</a></figcaption>
+        </figure>
+        <figure class="artwork-card">
+          <img src="{{ '/assets/images/portinari-floresta-ii.jpeg' | relative_url }}" alt="Floresta II, obra de Candido Portinari">
+          <figcaption><a href="https://www.portinari.org.br/acervo/obras/16931/floresta-ii">Floresta II</a></figcaption>
+        </figure>
+        <figure class="artwork-card">
+          <img src="{{ '/assets/images/portinari-floresta-iii.jpeg' | relative_url }}" alt="Floresta III, obra de Candido Portinari">
+          <figcaption><a href="https://www.portinari.org.br/acervo/obras/16932/floresta-iii">Floresta III</a></figcaption>
+        </figure>
+        <figure class="artwork-card">
+          <img src="{{ '/assets/images/portinari-desbravadores-de-florestas.jpeg' | relative_url }}" alt="Desbravadores de Florestas, obra de Candido Portinari">
+          <figcaption><a href="https://www.portinari.org.br/acervo/obras/16899/desbravadores-de-florestas">Desbravadores de Florestas</a></figcaption>
+        </figure>
+        <figure class="artwork-card">
+          <img src="{{ '/assets/images/portinari-cabeca-de-indio.jpeg' | relative_url }}" alt="Cabeça de Índio, teste de afresco de Candido Portinari">
+          <figcaption><a href="https://www.portinari.org.br/acervo/obras/18552/cabeca-de-indio">Cabeça de Índio</a></figcaption>
+        </figure>
+      </div>
+      <p class="artwork-note">As três obras da série <em>Floresta</em> foram priorizadas por dialogarem diretamente com o acervo presente no Centro da Obra do Humaitá. Imagens: Projeto Portinari.</p>
+    </div>
+  </section>
+
   <section id="publicacoes" class="publications-section section-red">
     <div class="container">
       <div class="section-heading light">
@@ -107,8 +139,8 @@ description: Instituto Arariboia — humanidades, ciências sociais e formação
         {% for post in site.posts limit: 2 %}
         <article class="publication-card{% if forloop.first %} large{% endif %}">
           {% if forloop.first %}
-          <div class="publication-image" role="img" aria-label="Pau-Brasil, de Candido Portinari">
-            <span class="image-credit publication-credit">Imagem: <a href="https://www.portinari.org.br/acervo/obras/18628/pau-brasil">Pau-Brasil, Candido Portinari</a></span>
+          <div class="publication-image" role="img" aria-label="Floresta II, de Candido Portinari">
+            <span class="image-credit publication-credit">Imagem: <a href="https://www.portinari.org.br/acervo/obras/16931/floresta-ii">Floresta II, Candido Portinari</a></span>
           </div>
           {% endif %}
           <div class="publication-body">

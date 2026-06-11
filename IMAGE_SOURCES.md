@@ -1,12 +1,34 @@
 # Image Sources
 
-The site uses local image copies fetched from the Projeto Portinari catalogue.
+The site uses local image copies fetched from the Projeto Portinari catalogue and the Instituto Arariboia profile image.
 
 ## Files
 
 - `assets/images/logo-arariboia.jpg`
   - Source: Instituto Arariboia YouTube profile image
   - URL: https://yt3.googleusercontent.com/ytc/AIdro_mnRUeasz0WPtIbc7Lm-o0etA_oJaridwQ6Uc2_y6dYo7k=s160-c-k-c0x00ffffff-no-rj
+
+- `assets/images/portinari-floresta-i.jpeg`
+  - Work: `Floresta I`, Candido Portinari, FCO-1693
+  - Source: https://www.portinari.org.br/acervo/obras/16929/floresta-i
+
+- `assets/images/portinari-floresta-ii.jpeg`
+  - Work: `Floresta II`, Candido Portinari, FCO-1694
+  - Source: https://www.portinari.org.br/acervo/obras/16931/floresta-ii
+
+- `assets/images/portinari-floresta-iii.jpeg`
+  - Work: `Floresta III`, Candido Portinari, FCO-1695
+  - Source: https://www.portinari.org.br/acervo/obras/16932/floresta-iii
+
+- `assets/images/portinari-desbravadores-de-florestas.jpeg`
+  - Work: `Desbravadores de Florestas`, Candido Portinari, FCO-1666
+  - Source: https://www.portinari.org.br/acervo/obras/16899/desbravadores-de-florestas
+
+- `assets/images/portinari-cabeca-de-indio.jpeg`
+  - Work: `Cabeça de Índio`, Candido Portinari, FCO-3204
+  - Source: https://www.portinari.org.br/acervo/obras/18552/cabeca-de-indio
+
+## Earlier local images kept for reference
 
 - `assets/images/portinari-brasil.jpeg`
   - Work: `Brasil`, Candido Portinari, FCO-5831

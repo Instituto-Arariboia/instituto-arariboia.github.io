@@ -82,7 +82,7 @@ code {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .24)),
-    url("../images/portinari-brasil.jpeg") center/cover;
+    url("../images/portinari-floresta-i.jpeg") center/cover;
   filter: grayscale(18%) contrast(1.08);
   transform: scale(1.02);
 }
@@ -257,7 +257,7 @@ h2 { font-size: clamp(36px, 5vw, 68px); }
 .publication-image {
   position: relative;
   min-height: 250px;
-  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .22)), url("../images/portinari-pau-brasil.jpeg") center/cover;
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .22)), url("../images/portinari-floresta-ii.jpeg") center/cover;
   filter: saturate(.9) contrast(1.05);
 }
 .publication-credit {
@@ -269,6 +269,43 @@ h2 { font-size: clamp(36px, 5vw, 68px); }
   text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
 }
 .publication-credit a:hover { color: var(--gold); }
+
+.artwork-section {
+  padding: 96px 0;
+  border-top: 1px solid var(--line);
+}
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.artwork-card {
+  margin: 0;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+}
+.artwork-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(.86) contrast(1.04);
+}
+.artwork-card figcaption {
+  padding: 14px 16px 16px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.artwork-card a:hover { color: var(--gold-dark); }
+.artwork-note {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--gray);
+  font-family: var(--serif-body);
+  font-size: 15px;
+}
 .publication-body { padding: 30px; }
 .publication-body h3 a:hover { color: var(--red); }
 .meta { color: var(--red); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
@@ -388,8 +425,8 @@ blockquote { margin: 0; font-family: var(--serif-body); font-size: 20px; line-he
   .brand-text { display: none; }
   .main-nav { gap: 12px; font-size: 12px; }
   .main-nav a:not(.nav-donate) { display: none; }
-  .two-column, .feature-grid, .card-grid, .publication-grid, .about-detail-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-section, .cards-section, .committee-section, .publications-section { padding: 72px 0; }
+  .two-column, .feature-grid, .card-grid, .publication-grid, .about-detail-grid, .artwork-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-section, .cards-section, .committee-section, .publications-section, .artwork-section { padding: 72px 0; }
   .feature-image img { min-height: 320px; }
   .publication-card.large { min-height: auto; }
   .page-shell { padding-top: 70px; }
