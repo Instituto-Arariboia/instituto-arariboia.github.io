@@ -16,14 +16,6 @@ The site uses local image copies fetched from the Projeto Portinari catalogue an
   - Work: `Floresta II`, Candido Portinari, FCO-1694
   - Source: https://www.portinari.org.br/acervo/obras/16931/floresta-ii
 
-- `assets/images/portinari-floresta-iii.jpeg`
-  - Work: `Floresta III`, Candido Portinari, FCO-1695
-  - Source: https://www.portinari.org.br/acervo/obras/16932/floresta-iii
-
-- `assets/images/portinari-desbravadores-de-florestas.jpeg`
-  - Work: `Desbravadores de Florestas`, Candido Portinari, FCO-1666
-  - Source: https://www.portinari.org.br/acervo/obras/16899/desbravadores-de-florestas
-
 - `assets/images/portinari-cabeca-de-indio.jpeg`
   - Work: `Cabeça de Índio`, Candido Portinari, FCO-3204
   - Source: https://www.portinari.org.br/acervo/obras/18552/cabeca-de-indio
